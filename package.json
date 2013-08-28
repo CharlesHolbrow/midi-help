@@ -1,0 +1,46 @@
+{
+  "name": "midi-help",
+  "description": "Companion to npm midi package",
+  "version": "0.1.0",
+  "homepage": "https://github.com/charlesholbrow/midi-help",
+  "author": {
+    "name": "Charles Holbrow",
+    "email": "charlesholbrow@gmail.com",
+    "url": "www.CharlesHolbrow.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/charlesholbrow/midi-help.git"
+  },
+  "bugs": {
+    "url": "https://github.com/charlesholbrow/midi-help/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/charlesholbrow/midi-help/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "out/lib/midi-help.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test",
+    "prepublish": "grunt compile"
+  },
+  "dependencies": {
+    "midi": "0.7.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-watch": "~0.5.0",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-coffeelint": "~0.0.7",
+    "grunt-simple-mocha": "~0.4.0",
+    "should": "~1.2.2",
+    "mocha-cakes": "~0.9.0",
+    "grunt": "~0.4.1"
+  },
+  "keywords": []
+}
