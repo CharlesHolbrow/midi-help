@@ -1,6 +1,6 @@
 # midi-help
 
-Companion to npm midi package
+Companion to [npm midi package](https://npmjs.org/package/midi)
 
 ## Getting Started
 Install the module with: `$ npm install midi-help`
@@ -14,11 +14,10 @@ var output = new midi.output();
 output.openPort(0);
 // send noteOn where noteNumber=60, velocity=127, channel=0
 output.sendMessage(help.noteOn(60, 127));
-send noteOn where noteNumber=53, velocity=80, channel=3
+// send noteOn where noteNumber=53, velocity=80, channel=3
 output.sendMessage(help.noteOff(53, 80, 3))
-// send pitchbend=8192, on default channel of 0
+// send pitchbend=8192 (perfect center), on default channel of 0
 output.sendMessage(help.pitchBend(8192));
-
 // send all notes off (continuous controller 123)
 output.sendMessage(help.cc(123, 0));
 ```
