@@ -4,7 +4,7 @@ midiTypes = require './midi-types'
 byStatus = midiTypes.byStatus
 module.exports = midiTypes
 
-class MidiStreamParser extends events.EventEmitter
+class MidiParser extends events.EventEmitter
   ################################
   # Public Interface
   constructor: ->
@@ -62,4 +62,4 @@ class MidiStreamParser extends events.EventEmitter
     @_midi.firstByte = undefined
 
 
-module.exports.MidiStreamParser = MidiStreamParser
+module.exports.MidiParser = MidiParser

@@ -3,18 +3,18 @@
 events = require('events')
 should = require('should')
 help = require('../lib/midi-help')
-MidiStreamParser = help.MidiStreamParser
+MidiParser = help.MidiParser
 
-describe 'MidiStreamParser', ->
+describe 'MidiParser', ->
   it 'should be an EventEmitter', ->
-    parser = new MidiStreamParser
+    parser = new MidiParser
     parser.should.be.an.instanceOf events.EventEmitter
 
   describe 'parseByte, parseBytes, parseArray', ->
 
     it '0x92 0x93 60 80 should be a noteOn message on channel 3', (done)->
       @timeout 200
-      parser = new MidiStreamParser
+      parser = new MidiParser
       parser.on 'noteOn', (note, vel, channel)->
         (3).should.eql channel
         done()
@@ -23,7 +23,7 @@ describe 'MidiStreamParser', ->
     it '0x91, 0x64, 0x65 should emit a "noteOn" with arguments: ' +
        'noteNumber = 100, velocity = 101, channel = 1', (done)->
       @timeout(200)
-      parser = new MidiStreamParser
+      parser = new MidiParser
       parser.on 'noteOn', (note, vel, ch)->
         note.should.eql 100
         vel.should.eql 101
@@ -35,13 +35,13 @@ describe 'MidiStreamParser', ->
 
     it '0xF8 should emit "clock"', (done)->
       @timeout 200
-      parser = new MidiStreamParser
+      parser = new MidiParser
       parser.on 'clock', -> done()
       parser.parseByte 0xF8
 
     it '0xE3, 5, 64 should emit "pitchBend" 8197, 3 (+5 PB, ch 3)', (done)->
       @timeout 200
-      parser = new MidiStreamParser
+      parser = new MidiParser
       parser.on 'pitchBend', (value, channel)->
         (8197).should.eql value
         (3).should.eql channel
