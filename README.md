@@ -78,6 +78,7 @@ Adding new midi types is super easy -- just one line of code gets you input and 
 
 ## Release History
 
+- 0.1.5 Remove unused dependency on npm midi
 - 0.1.3 Fis bug introduced after renaming MidiParser
 - 0.1.1 Add this handy README
 - 0.1.0 initial
