@@ -14,8 +14,8 @@ var output = new midi.output();
 output.openPort(0);
 output.sendMessage(help.noteOn(60, 127)); // note=50, vel=127, channel=0
 output.sendMessage(help.noteOff(53, 80, 3)); // note=53, vel=80, channel=3
-output.sendMessage(help.pitchBend(8192)); // pitchbend centered, channel=0
-output.sendMessage(help.cc(123, 0)); // all notes off/ continuous control 123
+output.sendMessage(help.pitchBend(8192, 0)); // pitchbend centered, channel=0
+output.sendMessage(help.cc(123, 0)); // all notes off/continuous control 123
 ```
 
 Listening for MIDI
@@ -60,6 +60,8 @@ var channel = 0
 output.sendMessage(help.channelPressure(pressure, channel));
 ```
 
+Unsupported messages are ignored. SysEx is currently broken.
+
 ## Notes
 System Exclusive messages are not handled correctly. By default, the npm midi module suppresses SysEx messages so this will not come up unless you explicitly enable sysex. 
 
@@ -70,6 +72,8 @@ _(Coming soon)_
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+
+Adding new midi types is super easy -- just one line of code gets you input and output. See how it's done [here](https://github.com/CharlesHolbrow/midi-help/blob/e0d7600ee4ac7bd19d7446300c0ac8530371482c/src/lib/midi-types.coffee#L32-L45)
 
 ## Release History
 
