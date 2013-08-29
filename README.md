@@ -40,7 +40,7 @@ parser.on('noteOff', function(note, velocity, channel){
 });
 ```
 ## Documentation
-Supported messages. parser will emit messages for each of these event types. You can also create arrays to pass in to `output.sendMessage`
+Supported messages:
 
 - noteOn
 - noteOff
@@ -51,8 +51,23 @@ Supported messages. parser will emit messages for each of these event types. You
 - songPosition
 - channelPressure
 
+You can use these messages for input and output. See example above for details.
+```javascript
+// input
+parser.on('clock', function(){
+  console.log('24 of these per quarter note :P');
+});
+
+// output
+var pressure = 127;
+var channel = 0
+output.sendMessage(help.channelPressure(pressure, channel));
+```
+
 ## Notes
 System Exclusive messages are not handled correctly. By default, the npm midi module suppresses SysEx messages so this will not come up unless you explicitly enable sysex. 
+
+There input checking -- if you use crazy values like `help.noteOn(240)` you will get invalid or incorrect midi messages.
 
 ## Examples
 _(Coming soon)_
@@ -62,6 +77,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
+- 0.1.1 Add this handy README
 - 0.1.0 initial
 
 ## License
