@@ -74,7 +74,7 @@ Adding new midi types is super easy -- just one line of code gets you input and 
 
 ## Release History
 
-- 0.1.2 Fis bug introduced after renaming MidiParser
+- 0.1.3 Fis bug introduced after renaming MidiParser
 - 0.1.1 Add this handy README
 - 0.1.0 initial
 
