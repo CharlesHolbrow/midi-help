@@ -70,8 +70,6 @@ There is no input checking -- if you use crazy values like `help.noteOn(240)` yo
 _(Coming soon)_
 
 ## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
-
 Adding new midi types is super easy -- just one line of code gets you input and output. See how it's done [here](https://github.com/CharlesHolbrow/midi-help/blob/e0d7600ee4ac7bd19d7446300c0ac8530371482c/src/lib/midi-types.coffee#L32-L45)
 
 ## Release History
