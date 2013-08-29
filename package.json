@@ -1,7 +1,7 @@
 {
   "name": "midi-help",
   "description": "Companion to npm midi package",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "homepage": "https://github.com/charlesholbrow/midi-help",
   "author": {
     "name": "Charles Holbrow",
@@ -29,8 +29,7 @@
     "test": "grunt test",
     "prepublish": "grunt compile"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "grunt-contrib-watch": "~0.5.0",
     "grunt-contrib-coffee": "~0.7.0",
