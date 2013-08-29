@@ -42,5 +42,5 @@
     "mocha-cakes": "~0.9.0",
     "grunt": "~0.4.1"
   },
-  "keywords": []
+  "keywords": ["midi, music"]
 }
