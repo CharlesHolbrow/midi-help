@@ -39,10 +39,12 @@ new MidiMsgType 'noteOn',           2,  true,   0x90
 new MidiMsgType 'noteOff',          2,  true,   0x80
 new MidiMsgType 'pitchBend',        2,  true,   0xE0, true
 new MidiMsgType 'cc',               2,  true,   0xB0
+new MidiMsgType 'channelPressure',  1,  true,   0xD0
 new MidiMsgType 'clock',            0,  false,  0xF8
 new MidiMsgType 'start',            0,  false,  0xFA
+new MidiMsgType 'stop',             0,  false,  0xFC
+new MidiMsgType 'continue',         0,  false,  0xfB
 new MidiMsgType 'songPosition',     2,  false,  0xF2, true
-new MidiMsgType 'channelPressure',  1,  true,   0xD0
 
 # programatially export a toArray for each type
 for name, type of types
