@@ -60,12 +60,11 @@ var channel = 0
 output.sendMessage(help.channelPressure(pressure, channel));
 ```
 
-Unsupported messages are ignored. SysEx is currently broken.
 
 ## Notes
-System Exclusive messages are not handled correctly. By default, the npm midi module suppresses SysEx messages so this will not come up unless you explicitly enable sysex. 
+Unsupported messages are ignored. SysEx is currently broken (by default, the npm midi module suppresses SysEx messages).
 
-There input checking -- if you use crazy values like `help.noteOn(240)` you will get invalid or incorrect midi messages.
+There is no input checking -- if you use crazy values like `help.noteOn(240)` you will get invalid or incorrect midi messages.
 
 ## Examples
 _(Coming soon)_
