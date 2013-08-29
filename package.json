@@ -1,7 +1,7 @@
 {
   "name": "midi-help",
   "description": "Companion to npm midi package",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "homepage": "https://github.com/charlesholbrow/midi-help",
   "author": {
     "name": "Charles Holbrow",
