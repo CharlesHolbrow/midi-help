@@ -12,14 +12,10 @@ var midi = require('midi');
 var output = new midi.output();
 
 output.openPort(0);
-// send noteOn where noteNumber=60, velocity=127, channel=0
-output.sendMessage(help.noteOn(60, 127));
-// send noteOn where noteNumber=53, velocity=80, channel=3
-output.sendMessage(help.noteOff(53, 80, 3))
-// send pitchbend=8192 (perfect center), on default channel of 0
-output.sendMessage(help.pitchBend(8192));
-// send all notes off (continuous controller 123)
-output.sendMessage(help.cc(123, 0));
+output.sendMessage(help.noteOn(60, 127)); // note=50, vel=127, channel=0
+output.sendMessage(help.noteOff(53, 80, 3)); // note=53, vel=80, channel=3
+output.sendMessage(help.pitchBend(8192)); // pitchbend centered, channel=0
+output.sendMessage(help.cc(123, 0)); // all notes off/ continuous control 123
 ```
 
 Listening for MIDI
@@ -51,7 +47,7 @@ Supported messages:
 - songPosition
 - channelPressure
 
-You can use these messages for input and output. See example above for details.
+Use these messages for input and output. See examples above for more detail.
 ```javascript
 // input
 parser.on('clock', function(){
