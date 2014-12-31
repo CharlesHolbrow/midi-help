@@ -24,7 +24,7 @@ input = new midi.input();
 parser = new help.MidiParser();
 
 input.on('message', function(deltaTime, message) {
-  parser.parseByte(message);
+  parser.parseArray(message);
 });
 
 console.log('Opening port:', input.getPortName(0));
