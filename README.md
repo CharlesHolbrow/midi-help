@@ -75,7 +75,7 @@ Adding new midi types is super easy -- just one line of code gets you input and 
 
 ## Release History
 
-- 1.0.0 rewrite, converting to coffeescript to modern js
+- 1.0.0 rewrite, converting to coffeescript to modern node.js. Untested in the browser.
 - 0.2.0 Add 'stop' and 'continue' midi message support
 - 0.1.5 Remove unused dependency on npm midi
 - 0.1.3 Fis bug introduced after renaming MidiParser
