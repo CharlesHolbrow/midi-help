@@ -21,7 +21,7 @@
       "url": "https://github.com/charlesholbrow/midi-help/blob/master/LICENSE-MIT"
     }
   ],
-  "main": "out/lib/midi-help.js",
+  "main": "src/lib/midi-help.js",
   "engines": {
     "node": ">= 0.8.0"
   },

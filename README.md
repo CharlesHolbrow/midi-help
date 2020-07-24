@@ -40,16 +40,16 @@ parser.on('noteOff', function(note, velocity, channel){
 // parser.on 'pitchBend', 'cc', 'clock', etc...
 ```
 ## Documentation
-Supported messages:
+These midi message types will be emitted as events:
 
-- noteOn
-- noteOff
-- pitchBend
-- cc
-- clock
-- start
-- songPosition
-- channelPressure
+- `noteOn`
+- `noteOff`
+- `pitchBend`
+- `cc`
+- `clock`
+- `start`
+- `songPosition`
+- `channelPressure`
 
 Use these messages for input and output. See examples above for more detail.
 ```javascript
@@ -70,14 +70,12 @@ Unsupported messages are ignored. SysEx is currently broken (by default, the npm
 
 There is no input checking -- if you use crazy values like `help.noteOn(240)` you will get invalid or incorrect midi messages.
 
-## Examples
-_(Coming soon)_
-
 ## Contributing
-Adding new midi types is super easy -- just one line of code gets you input and output. See how it's done [here](https://github.com/CharlesHolbrow/midi-help/blob/e0d7600ee4ac7bd19d7446300c0ac8530371482c/src/lib/midi-types.coffee#L32-L45)
+Adding new midi types is super easy -- just one line of code gets you input and output events and types. See `src/lib/midi-help.js` for details.
 
 ## Release History
 
+- 1.0.0 rewrite, converting to coffeescript to modern js
 - 0.2.0 Add 'stop' and 'continue' midi message support
 - 0.1.5 Remove unused dependency on npm midi
 - 0.1.3 Fis bug introduced after renaming MidiParser
